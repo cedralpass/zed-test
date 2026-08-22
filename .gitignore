@@ -11,3 +11,7 @@ ENV/
 # IDEs
 .vscode/
 .idea/
+
+# OS/Misc
+.DS_Store
+.pytest_cache/

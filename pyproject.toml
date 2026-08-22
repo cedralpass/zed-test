@@ -1,0 +1,19 @@
+[project]
+name = "zed-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Geoffrey Smalling", email = "cedralpass+git@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.3",
+]
+
+[project.scripts]
+zed-test = "zed_test:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
