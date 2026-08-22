@@ -4,9 +4,9 @@
 To build a lightweight, "zero-build," and mobile-first web application that helps kite surfers select the optimal kite size based on wind speed, rider weight, and board type.
 
 ## Tech Stack
-- **Backend**: Python 3.x with **Flask** (Minimal dependencies).
-- **Frontend**: **HTML5** with **Tailwind CSS via CDN** (Zero-config styling).
-- **Interactivity**: **Vanilla JavaScript** (No heavy frameworks like React/Vue).
+- **Backend**: Python 3.x with **Flask** (Minimal dependencies)
+- **Frontend**: **HTML5** with **Tailwind CSS via CDN** (Zero-config styling)
+- **Interactivity**: **Vanilla JavaScript** (No heavy frameworks like React/Vue)
 - **Architecture**: "Walking Skeleton" approach—moving from a functional core to a polished UI.
 
 ---
@@ -44,10 +44,10 @@ To build a lightweight, "zero-build," and mobile-first web application that help
 ---
 
 ## Phase 2: The UX Polish (Mobile-First & Unit Toggling)
-*Focus: Optimizing for usability in high-glare, high-moisture, "at-the-beach" environments.*
+*Focus: Optimizing for usability in high-glare, high-moisture, "at-int-the-beach" environments.*
 
 ### 2.1 Unit Toggling (The "Magic" Step)
-- **Vanilla JS Implementation**: Add a lightweight script to handle unit switching without page re-loads.
+- **Vanilla JS Implementation**: Add a lightweight script to handle unit switching without page reloads.
 - **Functional Requirements**:
     - Toggle between **Knots $\leftrightarrow$ MPH**.
     - Toggle between **Lbs $\leftrightarrow$ Kg**.
@@ -61,3 +61,24 @@ To build a lightweight, "zero-build," and mobile-first web application that help
 ### 2.3 Testing & Validation (Phase 2)
 - **Unit Logic Test**: Verify via browser console or simple DOM testing that toggling between Knots/MPH and Lbs/Kg updates the UI labels and input values correctly without a page reload.
 - **Visual Regression/UX Test**: Manual verification of high-contrast visibility and touch-target size on mobile viewport simulations.
+
+### 2.4 Advanced Features (Future Iterations)
+- **User Profiles**: Implement local storage or a database to save rider weight and preferred gear.
+- **Gear Library**: Enable the ability to add specific kite models (e.g., Ozone Reflex 2026) with their unique sweetspot ranges.
+
+---
+
+## Phase 3: Robustness & Accessibility
+*Focus: Hardening the application for real-world edge cases and inclusive use.*
+
+### 3.1 Error Handling & Validation
+- **Input Sanitization**: Add checks for invalid inputs (e.g., negative wind speed or weight).
+- **Extreme Weather Handling**: Implement graceful handling/warnings for extreme values (e.g., wind > 35 knots).
+
+### 3.2 Precision Unit Conversion
+- **Conversion Accuracy**: Ensure JS conversion logic is rigorously tested (1 knot $\approx$ 1.15 mph, 1 lb $\approx$ 0.45 kg).
+- **Rounding Logic**: Ensure consistent rounding across both the estimation engine and the UI display.
+
+### 3.3 Accessibility (A11y)
+- **Screen Reader Support**: Add `aria-label` attributes to all interactive elements (inputs, toggles, buttons).
+- **Color Contrast**: Audit and enforce WCAG-compliant color contrast ratios for sunlight readability.
