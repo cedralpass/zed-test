@@ -13,7 +13,7 @@ Rider weight also matters. I am around 196 lbs.  I usually have to have a bigger
 
 A twintip kiteboard is the normal.  With those smaller boards, you need a normal range of kites.  However, you can get a bigger twintip for a size down kite. Or even a kite surfboard, which would definately be one size down than normal.  
 
-A foil boards. I do not know the ranges for those boards and kites, but the kites are much smaller. 
+A foil boards. For foil, the recommended kite size is half the twintip size.
 
 
 ## Tech Stack & Architecture
@@ -46,10 +46,10 @@ A foil boards. I do not know the ranges for those boards and kites, but the kite
 - **Use Case**: When no specific kite is selected from the library.
 - **Baseline**: 15 knots $\approx$ 15m kite.
 - **Wind Adjustment**: For every 1 knot increase in wind speed, decrease kite size by 0.6m.
-- **Weight Adjustment**: 
+- Weight Adjustment: 
     - Baseline weight: 180 lbs.
-    - For every +10 lbs above 180, increase kite size by 1m.
-    - For every -10 lbs below 180, decrease kite size by 1m.
+    - For every +20 lbs above 180, increase kite size by 1m.
+    - For every -20 lbs below 180, decrease kite size by 1m.
 
 ### 3. Data Management & Profiles
 - **User Profile**: Store user-specific weight, preferred board types, and kite brands/models.
