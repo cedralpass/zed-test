@@ -41,6 +41,20 @@ def test_kite_calculation_extreme_wind(client):
     assert response.status_code == 200
     assert b"Warning: Extreme wind speed! Be careful." in response.data
 
+def test_kite_calculation_inputs_persist(client):
+    """Test that inputs persist after calculation (desired behavior)."""
+    payload = {
+        'wind_speed': '20',
+        'rider_weight': '180',
+        'board_type': 'twintip'
+    }
+    response = client.post('/', data=payload)
+    
+    # Check that the input fields ARE present in the response
+    assert b'value="20"' in response.data
+    assert b'value="180"' in response.data
+    assert b'value="twintip"' in response.data
+
 def test_invalid_input(client):
     """Test that invalid numeric input returns an error message."""
     payload = {
